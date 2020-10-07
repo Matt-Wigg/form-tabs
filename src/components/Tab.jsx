@@ -20,19 +20,6 @@ const Button = styled.button`
   }
 `;
 
-
-// a:hover{
-//   color: #fff;
-// }
-
-// a:hover:after{
-//   width: 100%;
-// }
-
-
-
-
-
 const Label = styled.span`
   color: #fff;
   text-align: center;
@@ -42,7 +29,6 @@ const Label = styled.span`
   display: block;
   padding: 10px 15px;
   cursor: pointer;
-  font-weight: 300;
   font-size: 14px;
 `;
 

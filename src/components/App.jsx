@@ -1,14 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import GlobalStyle from './assets/styles';
 import Tabs from './Tabs';
 
 const FormWrap = styled.div`
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 0 0 1px rgba(63,63,68,.1);
-  font-family: Roboto,Helvetica Neue,Arial,sans-serif;
   font-weight: 400;
   width: 50%;
+  margin: 20px;
 `;
 
 const FormHeader = styled.div`
@@ -40,6 +42,7 @@ const FormHeaderBody = styled.p`
 
 const App = () => (
   <FormWrap>
+    <GlobalStyle />
     <FormHeader>
       <FormHeaderTitle>Awesome Form</FormHeaderTitle>
       <FormHeaderBody>Wow... This is a cool form.</FormHeaderBody>
