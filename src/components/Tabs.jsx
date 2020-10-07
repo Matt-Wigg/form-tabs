@@ -1,6 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Tab from './Tab';
+
+const TabsWrap = styled.ol`
+  display: flex;
+  flex-flow: row;
+  padding: 0;
+  width: 100%;
+`;
 
 class Tabs extends Component {
   constructor(props) {
@@ -20,7 +28,7 @@ class Tabs extends Component {
     const { onClickTabItem, props: { children }, state: { activeTab } } = this;
     return (
       <div className="tabs">
-        <ol className="tab-list">
+        <TabsWrap className="tab-list">
           {children.map((child) => {
             const { label } = child.props;
             return (
@@ -32,7 +40,7 @@ class Tabs extends Component {
               />
             );
           })}
-        </ol>
+        </TabsWrap>
         <div className="tab-content">
           {children.map((child) => {
             if (child.props.label !== activeTab) return undefined;

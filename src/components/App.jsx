@@ -2,28 +2,60 @@ import React from 'react';
 import styled from 'styled-components';
 import Tabs from './Tabs';
 
-const TabWrap = styled.div`
+const FormWrap = styled.div`
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 0 0 1px rgba(63,63,68,.1);
   font-family: Roboto,Helvetica Neue,Arial,sans-serif;
   font-weight: 400;
+  width: 50%;
+`;
+
+const FormHeader = styled.div`
+  padding-top: 25px;
+  padding-bottom: 10px;
+  color: #333;
+  font-weight: 300;
+  font-size: 22px;
+  text-align: center;
+  line-height: 1.42857143;
+`;
+
+const FormHeaderTitle = styled.h4`
+  margin: 0;
+  color: #333;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 30px;
+`;
+
+const FormHeaderBody = styled.p`
+  font-size: 14px;
+  font-weight: 300;
+  color: #444;
+  margin-bottom: 0;
+  line-height: 1.5;
+  margin: 0 0 10px;
 `;
 
 const App = () => (
-  <TabWrap>
+  <FormWrap>
+    <FormHeader>
+      <FormHeaderTitle>Awesome Form</FormHeaderTitle>
+      <FormHeaderBody>Wow... This is a cool form.</FormHeaderBody>
+    </FormHeader>
     <Tabs>
       <div label="FIRST TAB">
-        See ya later, Alligator!
+        Hey! I am tab one.
       </div>
       <div label="SECOND TAB">
-        After awhile, Crocodile!
+        Hey! I am tab Two.
       </div>
       <div label="THIRD TAB">
-        Nothing to see here, this tab is extinct!
+        Hey! I am tab Three.
       </div>
     </Tabs>
-  </TabWrap>
+  </FormWrap>
 );
 
 export default App;

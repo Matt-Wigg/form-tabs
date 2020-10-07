@@ -1,5 +1,50 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Button = styled.button`
+  background-color: ${(props) => (props.activeTab === props.label ? '#23ccef' : '#9a9a9a')};
+  border: none;
+  color: white;
+  width: 100%;
+  float: left;
+  position: relative;
+  display: inline-block;
+  padding: 0;
+  outline: none;
+  box-shadow: inset 0px 0px 0px #23ccef;
+  transition: all 0.35s !important;
+
+  &&:hover{
+    background-color: inset 0px 40px 0px #23ccef;
+  }
+`;
+
+
+// a:hover{
+//   color: #fff;
+// }
+
+// a:hover:after{
+//   width: 100%;
+// }
+
+
+
+
+
+const Label = styled.span`
+  color: #fff;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 14px;
+`;
 
 class Tab extends Component {
   constructor() {
@@ -17,14 +62,16 @@ class Tab extends Component {
     let className = 'tab-list-item';
     if (activeTab === label) className += ' tab-list-active';
     return (
-      <button
+      <Button
         type="submit"
+        activeTab={activeTab}
+        label={label}
         className={className}
         onClick={onClick}
         onKeyPress={onClick}
       >
-        {label}
-      </button>
+        <Label>{label}</Label>
+      </Button>
     );
   }
 }
