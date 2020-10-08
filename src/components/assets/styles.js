@@ -17,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
       display: block;
-      background-color: #f4f4f5;
+      background-color: #242582;
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;

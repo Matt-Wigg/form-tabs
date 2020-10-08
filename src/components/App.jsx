@@ -49,7 +49,7 @@ const App = () => (
     </FormHeader>
     <Tabs>
       <div label="FIRST TAB">
-        Hey! I am tab one.
+        Hey! I am tab One.
       </div>
       <div label="SECOND TAB">
         Hey! I am tab Two.

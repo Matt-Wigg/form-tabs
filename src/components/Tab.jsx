@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background-color: ${(props) => (props.activeTab === props.label ? '#23ccef' : '#9a9a9a')};
+  background-color: ${(props) => (props.activeTab === props.label ? '#77a6f7' : '#aaa')};
   border: none;
   color: white;
   width: 100%;
@@ -13,11 +13,7 @@ const Button = styled.button`
   padding: 0;
   outline: none;
   box-shadow: inset 0px 0px 0px #23ccef;
-  transition: all 0.35s !important;
-
-  &&:hover{
-    background-color: inset 0px 40px 0px #23ccef;
-  }
+  transition: all 0.25s !important;
 `;
 
 const Label = styled.span`
@@ -30,6 +26,7 @@ const Label = styled.span`
   padding: 10px 15px;
   cursor: pointer;
   font-size: 14px;
+  font-weight: 400;
 `;
 
 class Tab extends Component {
