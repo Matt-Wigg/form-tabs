@@ -3,21 +3,22 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background-color: ${(props) => (props.activeTab === props.label ? '#77a6f7' : '#aaa')};
+  background-color: ${(props) => (props.activeTab === props.label ? '#e91e63' : '#c8c8c833')};
   border: none;
-  color: white;
+  box-shadow: ${(props) => (props.activeTab === props.label ? '0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)' : '')};
+  border-radius: ${(props) => (props.activeTab === props.label ? '4px' : '0')};
   width: 100%;
   float: left;
   position: relative;
   display: inline-block;
-  padding: 0;
   outline: none;
-  box-shadow: inset 0px 0px 0px #23ccef;
-  transition: all 0.25s !important;
+  transition: all 0.25s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+  transform: ${(props) => (props.activeTab === props.label ? 'scale(1.05, 1.15)' : 'scale(1)')};
+  z-index: ${(props) => (props.activeTab === props.label ? '1' : '0')};
 `;
 
 const Label = styled.span`
-  color: #fff;
+  color: ${(props) => (props.activeTab === props.label ? '#fff' : '#767676')};
   text-align: center;
   border: none;
   text-transform: uppercase;
@@ -25,8 +26,8 @@ const Label = styled.span`
   display: block;
   padding: 10px 15px;
   cursor: pointer;
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 12px;
+  font-weight: 500;
 `;
 
 class Tab extends Component {
@@ -53,7 +54,12 @@ class Tab extends Component {
         onClick={onClick}
         onKeyPress={onClick}
       >
-        <Label>{label}</Label>
+        <Label
+          activeTab={activeTab}
+          label={label}
+        >
+          {label}
+        </Label>
       </Button>
     );
   }
