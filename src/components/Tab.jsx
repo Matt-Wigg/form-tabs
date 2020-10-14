@@ -3,18 +3,19 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background-color: ${(props) => (props.activeTab === props.label ? '#e91e63' : '#c8c8c833')};
+  background-color: ${(props) => (props.activeTab === props.label && '#e91e63')};
   border: none;
-  box-shadow: ${(props) => (props.activeTab === props.label ? '0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)' : '')};
+  box-shadow: ${(props) => (props.activeTab === props.label
+    ? '0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(233, 30, 99, 0.4)' : '')};
   border-radius: ${(props) => (props.activeTab === props.label ? '4px' : '0')};
   width: 100%;
   float: left;
   position: relative;
   display: inline-block;
   outline: none;
-  transition: all 0.25s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
-  transform: ${(props) => (props.activeTab === props.label ? 'scale(1.05, 1.15)' : 'scale(1)')};
+  transition: all 0.15s;
   z-index: ${(props) => (props.activeTab === props.label ? '1' : '0')};
+  transform: ${(props) => (props.activeTab === props.label ? 'scale(1.05, 1.15)' : 'scale(1)')};
 `;
 
 const Label = styled.span`

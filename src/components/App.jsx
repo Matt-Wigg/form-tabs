@@ -47,17 +47,17 @@ const App = () => (
       <FormHeaderTitle>Awesome Form</FormHeaderTitle>
       <FormHeaderBody>Wow... This is a cool form.</FormHeaderBody>
     </FormHeader>
-    <Tabs>
-      <div label="FIRST TAB">
-        Hey! I am tab One.
+      <Tabs>
+        <div label="FIRST TAB">
+          Hey! I am tab One.
       </div>
-      <div label="SECOND TAB">
-        Hey! I am tab Two.
+        <div label="SECOND TAB">
+          Hey! I am tab Two.
       </div>
-      <div label="THIRD TAB">
-        Hey! I am tab Three.
+        <div label="THIRD TAB">
+          Hey! I am tab Three.
       </div>
-    </Tabs>
+      </Tabs>
   </FormWrap>
 );
 

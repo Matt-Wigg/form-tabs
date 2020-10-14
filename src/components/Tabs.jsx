@@ -8,6 +8,7 @@ const TabsWrap = styled.ol`
   flex-flow: row;
   padding: 0;
   width: 100%;
+  background-color: #c8c8c833;
 `;
 
 class Tabs extends Component {
